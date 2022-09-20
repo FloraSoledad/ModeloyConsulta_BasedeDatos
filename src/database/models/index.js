@@ -30,6 +30,7 @@ Object.keys(db).forEach(modelName => {
     db[modelName].associate(db);
   }
 });
+
 sequelize
         .authenticate()
         .then(() => {
