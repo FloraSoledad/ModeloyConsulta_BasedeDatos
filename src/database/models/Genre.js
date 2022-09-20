@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.STRING(100),
         allowNull: false,
     },
-    ranting: {
+    ranking: {
         type: dataTypes.INTEGER.UNSIGNED,
         allowNull: false,
         unique: true
@@ -23,16 +23,16 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false,
         defaultValue: "1",
     },
-}
-const config = {
-    tableName: "genres",
-    timesName: true,
-    underscored: true
-}
+    }
+    const config = {
+        tableName: "genres",
+        timesName: true,
+        underscored: true
+    }
 
 
-const Genre = sequelize.define(alias, cols, config);
+    const Genre = sequelize.define(alias, cols, config);
 
-return Genre;
-}
+    return Genre;
+    }
 
