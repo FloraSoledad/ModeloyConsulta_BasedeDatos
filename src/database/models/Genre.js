@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
         unique: true
     },
     active: {
-        type: dataTypes.INTEGER(1),
+        type: dataTypes.INTEGER(1), /* o tambien podria ser BOOLEAN */
         allowNull: false,
         defaultValue: "1",
     },

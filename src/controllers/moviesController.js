@@ -5,6 +5,6 @@ module.exports = {
             .then((movies) => {
                 return res.send(movies)
         })
-        .cath((error) => console.log(error))
+        .catch((error) => console.log(error))
     }
 }

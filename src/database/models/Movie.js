@@ -5,22 +5,22 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull: false,
-            autoincrement: true,
+            autoIncrement: true,
         },
         title: {
             type: dataTypes.STRING(500),
             allowNull: false,
         },
         rating: {
-            type: dataTypes.DECIMAL(3, 1).UNSIGNED,
+            type: dataTypes.DECIMAL(3,1).UNSIGNED,
             allowNull: false,
         },
-        awars: {
+        awards: {
             type: dataTypes.INTEGER.UNSIGNED,
             allowNull: false,
-            defaultvalue: '0',
+            defaultValue: '0',
         },
-        realese_date: {
+        release_date: {
             type: dataTypes.DATE,
             allowNull: false,
         },
@@ -30,16 +30,16 @@ module.exports = (sequelize, dataTypes) => {
         },
         genre_id: {
             type: dataTypes.INTEGER.UNSIGNED,
-            allowNull: false,
+            allowNull: true,
         },
     };
     const config = {
         tableName: "movies",
-        timesName: true,
-        underscored: true
+        timestamps: true, /* marca de tiempo siempre nombrar si la tiene o no(false) aunqe no este */
+        underscored: true 
     }
     
-    const Movie = sequelize.define(alias, cols, config);
+    const Movie = sequelize.define(alias, cols, config); /* cols = columna */
     
-    return Movie;
+    return Movie; /* retorna el modelo */
 };
